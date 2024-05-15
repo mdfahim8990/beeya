@@ -267,6 +267,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 levelColor: themPinkColor,
               ),
               SizedBox(height: 5.sp,),
+
               Row(
                 children: [
                   Checkbox(
