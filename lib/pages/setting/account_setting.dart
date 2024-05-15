@@ -326,13 +326,13 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                   levelColor: themPinkColor,
                 ),
                 SizedBox(
-                  height: 5.sp,
+                  height: 10.sp,
                 ),
           
                 //              *********** Bank Details ************
           
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                  // height: 200,
                   width: double.infinity,
                   decoration: BoxDecoration(
