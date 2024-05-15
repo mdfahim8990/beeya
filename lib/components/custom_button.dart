@@ -27,8 +27,6 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
     return ElevatedButton(
-
-
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
           //minimumSize: Size.fromHeight(10), // Set this

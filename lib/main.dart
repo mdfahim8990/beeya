@@ -1,4 +1,5 @@
 import 'package:beeya/local_notification/local_notification.dart';
+import 'package:beeya/pages/auth/Sign_up.dart';
 import 'package:beeya/pages/auth/sing_in.dart';
 import 'package:beeya/pages/gift/gift_payment.dart';
 import 'package:beeya/pages/gift/send_gift.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
        // useMaterial3: true,
       ),
-      home:   BridesMutualFriend(),
+      home:   SignUpPage(),
     );
   }
 }
