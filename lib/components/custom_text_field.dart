@@ -67,6 +67,7 @@ class CustomTextField extends StatelessWidget {
           hintStyle: TextStyle(color: hintColor ?? Colors.black26),
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
+          //contentPadding: const EdgeInsets.only(bottom: -10.0),
           //icon: Icon(Icons.email),
           enabledBorder: UnderlineInputBorder(
             borderSide:
