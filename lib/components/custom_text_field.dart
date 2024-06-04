@@ -62,7 +62,7 @@ class CustomTextField extends StatelessWidget {
         maxLength: maxLength,
         decoration: InputDecoration(
           labelText: levelText,
-          labelStyle: TextStyle(color: levelColor ?? themPinkColor,fontSize: 12.sp),
+          labelStyle: TextStyle(color: levelColor ?? themPinkColor,fontSize: 14),
           hintText: hintText,
           hintStyle: TextStyle(color: hintColor ?? Colors.black26),
           prefixIcon: prefixIcon,

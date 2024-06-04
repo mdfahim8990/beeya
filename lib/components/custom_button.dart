@@ -46,7 +46,7 @@ class CustomButton extends StatelessWidget {
             padding: const EdgeInsets.all(1.5),
             child: Text(
               buttonText??"",
-              style: TextStyle(fontSize: buttonTextSize ?? 12.sp,fontWeight: FontWeight.w400),
+              style: TextStyle(fontSize: buttonTextSize ?? 14,fontWeight: FontWeight.w400),
             ),
           ),
         ],

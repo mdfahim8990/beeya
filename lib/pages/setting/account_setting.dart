@@ -134,7 +134,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                 ),
                 Text(
                   "Mobile Number",
-                  style: TextStyle(fontSize: 12.sp, color: themPinkColor),
+                  style: TextStyle(fontSize: 14, color: themPinkColor),
                 ),
                 Wrap(
                   children: <Widget>[
@@ -345,8 +345,8 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Bank Details",style: TextStyle(fontFamily: 'Cormorant',fontSize: 30.sp,),),
-                          Icon(Icons.lock_outline_sharp,size: 20.sp,)
+                          Text("Bank Details",style: TextStyle(fontFamily: 'Cormorant',fontSize: 30,),),
+                          Icon(Icons.lock_outline_sharp,size: 30,)
                         ],
                       ),
           
@@ -447,12 +447,15 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                 SizedBox(
                   height: 15.sp,
                 ),
-                Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: 8.0.sp),
-                  child: CustomButton(
-                    onPressed: () {},
-                    backGroundColor: themPinkColor,
-                    buttonText: 'Sign UP',
+                SizedBox(
+                  height: 40,
+                  child: Padding(
+                    padding:  EdgeInsets.symmetric(horizontal: 14),
+                    child: CustomButton(
+                      onPressed: () {},
+                      backGroundColor: themPinkColor,
+                      buttonText: 'Sign UP',
+                    ),
                   ),
                 ),
                 SizedBox(
