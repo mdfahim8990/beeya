@@ -10,6 +10,7 @@ import 'package:beeya/pages/guest/add_guest.dart';
 
 import 'package:beeya/pages/guest/guest_details.dart';
 import 'package:beeya/pages/guest/guest_list.dart';
+import 'package:beeya/pages/send_invitation/send_invitation.dart';
 import 'package:beeya/pages/setting/account_setting.dart';
 import 'package:beeya/pages/wedding-plan/wedding_planner_page.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
        // useMaterial3: true,
       ),
-      home:   ThankYouPage(),
+      home:   SendInvitationPage(),
     );
   }
 }
