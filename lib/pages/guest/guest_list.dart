@@ -111,8 +111,12 @@ class _GuestListPageState extends State<GuestListPage> {
                 height: height * .02,
               ),
               Padding(
-                padding:  EdgeInsets.only(left: 20.sp,right: 20.sp),
-                child: CustomButton(onPressed: (){}, backGroundColor: themPinkColor, buttonText: 'Send Invite',buttonTextSize: 11.sp),
+                padding: EdgeInsets.only(left: 20.sp, right: 20.sp),
+                child: CustomButton(
+                    onPressed: () {},
+                    backGroundColor: themPinkColor,
+                    buttonText: 'Send Invite',
+                    buttonTextSize: 11.sp),
               ),
               SizedBox(
                 height: height * .01,
@@ -209,7 +213,7 @@ class _GuestListPageState extends State<GuestListPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                              //SizedBox(width: 10.sp,),
+                                //SizedBox(width: 10.sp,),
                                 Text(
                                   "Full Name",
                                   style: TextStyle(
