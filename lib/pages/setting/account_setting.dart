@@ -74,19 +74,24 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                   children: [
                     Expanded(
                       flex: 3,
-                      child: CustomTextField(
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter First Name';
-                          }
-                          return null;
-                        },
-                        controller: firstNameController,
-                        levelText: "Name",
-                        hintText: 'First Name',
-                        textInputAction: TextInputAction.done,
-                        keyboardType: TextInputType.text,
-                        //maxLength: 19,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('Name',style: TextStyle(fontSize: 14,color:themPinkColor ),),
+                          CustomTextField(
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter First Name';
+                              }
+                              return null;
+                            },
+                            controller: firstNameController,
+                            hintText: 'First Name',
+                            textInputAction: TextInputAction.done,
+                            keyboardType: TextInputType.text,
+                            //maxLength: 19,
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
@@ -94,21 +99,27 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                     ),
                     Expanded(
                       flex: 2,
-                      child: CustomTextField(
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter Last Name';
-                          }
-                          return null;
-                        },
-                        controller: lastNameController,
-                        levelText: 'Last Name',
-                        levelColor: Colors.grey,
-          
-                        //hintText: "Last Name",
-                        textInputAction: TextInputAction.done,
-                        keyboardType: TextInputType.text,
-                        //maxLength: 19,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('',style: TextStyle(fontSize: 14,color: themPinkColor),),
+                          CustomTextField(
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter Last Name';
+                              }
+                              return null;
+                            },
+                            controller: lastNameController,
+
+                            levelColor: Colors.grey,
+
+                            hintText: "Last Name",
+                            textInputAction: TextInputAction.done,
+                            keyboardType: TextInputType.text,
+                            //maxLength: 19,
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -116,6 +127,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                 SizedBox(
                   height: 5.sp,
                 ),
+                const Text('Email',style: TextStyle(fontSize: 14,color: themPinkColor),),
                 CustomTextField(
                   controller: emailController,
                   validator: (value) {
@@ -124,7 +136,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                     }
                     return null;
                   },
-                  levelText: "Email",
+
                   hintText: 'fahim@gmail.com',
                   textInputAction: TextInputAction.done,
                   keyboardType: TextInputType.emailAddress,
@@ -132,7 +144,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                 SizedBox(
                   height: 12.sp,
                 ),
-                Text(
+                const Text(
                   "Mobile Number",
                   style: TextStyle(fontSize: 14, color: themPinkColor),
                 ),
@@ -220,6 +232,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                 SizedBox(
                   height: 5.sp,
                 ),
+                const Text('Old Password',style: TextStyle(fontSize: 14,color: themPinkColor),),
                 CustomTextField(
                   controller: oldPasswordController,
                   validator: (value) {
@@ -228,7 +241,6 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                     }
                     return null;
                   },
-                  levelText: 'Old Password',
                   levelColor: themPinkColor,
                   obscureText: oldPassView ? false : true,
                   suffixIcon: IconButton(
@@ -256,6 +268,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                 SizedBox(
                   height: 5.sp,
                 ),
+                const Text('New Password',style: TextStyle(fontSize: 14,color: themPinkColor),),
                 CustomTextField(
                   controller: newPasswordController,
                   validator: (value) {
@@ -286,12 +299,12 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                             color: themPinkColor,
                           ),
                   ),
-                  levelText: 'New Password',
-                  levelColor: themPinkColor,
+
                 ),
                 SizedBox(
                   height: 5.sp,
                 ),
+                const Text('Retype Password',style: TextStyle(fontSize: 14,color: themPinkColor),),
                 CustomTextField(
                   controller: reTypePasswordController,
                   validator: (value) {
@@ -322,8 +335,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                             color: themPinkColor,
                           ),
                   ),
-                  levelText: 'Retype Password',
-                  levelColor: themPinkColor,
+
                 ),
                 SizedBox(
                   height: 10.sp,
@@ -342,7 +354,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text("Bank Details",style: TextStyle(fontFamily: 'Cormorant',fontSize: 30,),),
@@ -450,7 +462,7 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                 SizedBox(
                   height: 40,
                   child: Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: 14),
+                    padding:  const EdgeInsets.symmetric(horizontal: 14),
                     child: CustomButton(
                       onPressed: () {},
                       backGroundColor: themPinkColor,

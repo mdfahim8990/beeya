@@ -18,13 +18,13 @@ class CustomTextField extends StatelessWidget {
       this.levelColor,
       this.prefixIcon,
       this.suffixIcon,
-        this.obscureText,
+      this.obscureText,
       this.enabledBorderColor,
       this.focusedBorderColors,
-      this.inputFormatters, this.textInputAction,
-        this.maxLength,
-        this.onTap
-      });
+      this.inputFormatters,
+      this.textInputAction,
+      this.maxLength,
+      this.onTap});
 
   TextEditingController controller = TextEditingController();
 
@@ -44,41 +44,40 @@ class CustomTextField extends StatelessWidget {
   List<TextInputFormatter>? inputFormatters;
   TextInputAction? textInputAction;
   int? maxLength;
- final VoidCallback ? onTap;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
     return TextFormField(
       onTap: onTap,
-        controller: controller,
-        obscureText: obscureText??false,
-        keyboardType: keyboardType,
-        focusNode: focusNode,
-        onFieldSubmitted: (value) => onFieldSubmitted!(value),
-        validator: (input) => validator!(input),
-        inputFormatters: inputFormatters??[],
-        textInputAction: textInputAction,
-        maxLength: maxLength,
-        decoration: InputDecoration(
-          labelText: levelText,
-          labelStyle: TextStyle(color: levelColor ?? themPinkColor,fontSize: 14),
-          hintText: hintText,
-          hintStyle: TextStyle(color: hintColor ?? Colors.black26),
-          prefixIcon: prefixIcon,
-          suffixIcon: suffixIcon,
-          //contentPadding: const EdgeInsets.only(bottom: -10.0),
-          //icon: Icon(Icons.email),
-          enabledBorder: UnderlineInputBorder(
-            borderSide:
-                BorderSide(color: enabledBorderColor ?? Colors.black26,width: 1.5),
-          ),
-          focusedBorder: UnderlineInputBorder(
-            borderSide:
-                BorderSide(color: focusedBorderColors ?? themPinkColor,width: 1.5),
-          ),
+      controller: controller,
+      obscureText: obscureText ?? false,
+      keyboardType: keyboardType,
+      focusNode: focusNode,
+      onFieldSubmitted: (value) => onFieldSubmitted!(value),
+      validator: (input) => validator!(input),
+      inputFormatters: inputFormatters ?? [],
+      textInputAction: textInputAction,
+      maxLength: maxLength,
+      decoration: InputDecoration(
+        labelText: levelText,
+        labelStyle: TextStyle(color: levelColor ?? themPinkColor, fontSize: 14),
+        hintText: hintText,
+        hintStyle: TextStyle(color: hintColor ?? Colors.black26),
+        prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
+        //contentPadding: const EdgeInsets.only(bottom: -10.0),
+        //icon: Icon(Icons.email),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+              color: enabledBorderColor ?? Colors.black26, width: 1.5),
         ),
-
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+              color: focusedBorderColors ?? themPinkColor, width: 1.5),
+        ),
+      ),
     );
   }
 }
